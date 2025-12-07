@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile</title>
+  <title>Simple Profile</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
+
+      /* Anime background */
+      background: url("gojo.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,11 +22,12 @@
     }
 
     .profile {
-      background: white;
+      background: rgba(255, 255, 255, 0.85); /* Slight transparent white for anime effect */
+      backdrop-filter: blur(4px);
       width: 320px;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       text-align: center;
     }
 
@@ -28,24 +35,20 @@
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      background: #4f46e5;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      font-weight: bold;
+      object-fit: cover;
+      display: block;
       margin: 0 auto 15px;
     }
 
     h1 {
       margin: 10px 0 5px;
       font-size: 20px;
+      color: #222;
     }
 
     p {
       margin: 5px 0;
-      color: #555;
+      color: #444;
       font-size: 14px;
     }
 
@@ -67,7 +70,9 @@
 <body>
 
   <div class="profile">
-    <div class="avatar">BS</div>
+    <!-- Your Sukuna profile picture -->
+    <img src="sukuna.jpg" class="avatar">
+
     <h1>Benedict A. San Felipe</h1>
     <p>Student / Aspiring Developer</p>
     <p>Quezon City, Philippines</p>
